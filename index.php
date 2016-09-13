@@ -50,7 +50,7 @@
 <div class="btn-group btn-toggle"> 
 <button class="btn btn-lg btn-default" data-group="11110" data-switch="C" data-action="1">AN</button>
 <button class="btn btn-lg btn-primary" data-group="11110" data-switch="C" data-action="0">AUS</button>
-</div> <div class="title"> Ladegerät </div>
+</div> <div class="title"> Fluter </div>
 </div>
 
 <div class="switch col-xs-6">
@@ -72,25 +72,33 @@
 <script>
 $(function(){
 
-   $('.switch button').on('click',function(event){
+  $('.switch button').on('click',function(event){
 
-         var button = $(event.target);
+    var button = $(event.target);
  
-         var action = button.attr('data-action'); 
-         var group = button.attr('data-group'); 
-         var schalt = button.attr('data-switch'); 
+    var action = button.attr('data-action'); 
+    var group = button.attr('data-group'); 
+    var schalt = button.attr('data-switch'); 
 
-         $.get('http://homepi/switch/switch.php?group='+group+'&switch='+schalt+'&action='+action,
-		function(data){
+    $.get('http://homepi/switch/switch.php?group='+group+'&switch='+schalt+'&action='+action,
+    function(data){
 			
-		});
+    });
 	
-   });
+  });
 
 
-   $('.switch').each(function(i,elem){
+  $('.switch button[data-action=1]').each(function(i,button){
        	
-   });
+    var group = $(button).attr('data-group'); 
+    var schalt = $(button).attr('data-switch'); 
+
+    $.get('http://homepi/switch/state.php?group='+group+'&switch='+schalt,
+    function(data){
+      console.log(group+schalt+'='+data);	
+    });
+		
+  });
 
 });
 </script>
