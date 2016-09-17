@@ -1,4 +1,6 @@
 <?php
+$forwarded_for = $_SERVER['HTTP_X_FORWARDED_FOR'];
+$remote_addr = $_SERVER['REMOTE_ADDR'];
 $switch = array('A'=>"16",'B'=>"08",'C'=>"04",'D'=>"02",'E'=>"01");
 $nSys=1;
 $nDelay=0;
@@ -12,10 +14,12 @@ $state = 'state/'.$nSys.$nGroup.$aSwitch;
 if (file_exists($state)) {
   if ($nAction == 0) {
     unlink($state);
+    file_put_contents('log/switch.log',sprintf("%s,%s,%d,%s,%s,%s\n",$remote_addr,$forwarded_for,time(),$nGroup,$aSwitch,'off'),FILE_APPEND);
   } 
 } else {
   if ($nAction == 1) {
     touch($state);
+    file_put_contents('log/switch.log',sprintf("%s,%s,%d,%s,%s,%s\n",$remote_addr,$forwarded_for,time(),$nGroup,$aSwitch,'on'),FILE_APPEND);
   }
 }
 

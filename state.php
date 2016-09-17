@@ -1,11 +1,18 @@
 <?php
-$nSys=1;
-$nDelay=0;
 $nGroup=$_GET['group'];
+$nAction=$_GET['action'];
 $aSwitch=$_GET['switch'];
-$state = 'state/'.$nSys.$nGroup.$aSwitch;
+$state = 'state/1'.$nGroup.$aSwitch;
 if (file_exists($state)) {
-  echo 1;
+  if ($nAction == 1) {
+    echo 'active';
+  } else {
+    echo 'inactive';
+  }
 } else {
-  echo 0;
+  if ($nAction == 0) {
+    echo 'active';
+  } else {
+    echo 'inactive';
+  }
 }
