@@ -17,8 +17,10 @@
       Heinrich Boers
   </author>
 
-<platform name="ios" />
 <platform name="android" />
+<!--
+<platform name="ios" />
 <platform name="winphone" />
+-->
 
 </widget>
