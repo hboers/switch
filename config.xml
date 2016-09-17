@@ -17,12 +17,10 @@
       Heinrich Boers
   </author>
 
-  <access origin="*"></access>
-  <allow-intent href="http://*/*" />
- <preference name="permissions" value="none"/>
-<platform name="android" >
+ <access origin="*" />
+ <platform name="android" >
  
-</platform>
+ </platform>
 <!--
 <platform name="ios" />
 <platform name="winphone" />
