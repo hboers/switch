@@ -17,13 +17,13 @@
       Heinrich Boers
   </author>
 
- <access origin="*" />
- <platform name="android" >
- 
- </platform>
+  <access origin="192.168.178.*" />
+  <allow-navigation href="http://*/*" />
+  <allow-intent href="http://*/*" />
+  <platform name="android" />
 <!--
-<platform name="ios" />
-<platform name="winphone" />
+  <platform name="ios" />
+  <platform name="winphone" />
 -->
 
 </widget>
