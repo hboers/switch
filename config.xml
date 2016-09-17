@@ -19,7 +19,7 @@
 
   <access origin="*"></access>
   <allow-intent href="http://*/*" />
-
+ <preference name="permissions" value="none"/>
 <platform name="android" >
  
 </platform>
