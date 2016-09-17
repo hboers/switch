@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');  
 $forwarded_for = $_SERVER['HTTP_X_FORWARDED_FOR'];
 $remote_addr = $_SERVER['REMOTE_ADDR'];
 $switch = array('A'=>"16",'B'=>"08",'C'=>"04",'D'=>"02",'E'=>"01");

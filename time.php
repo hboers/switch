@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');  
 $nGroup=$_GET['group'];
 $aSwitch=$_GET['switch'];
 $state = 'state/1'.$nGroup.$aSwitch;
