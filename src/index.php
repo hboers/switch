@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' 192.168.178.*;" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' *;" />
  
 <link rel="stylesheet" href="bootstrap.min.css"> 
 <link rel="stylesheet" href="bootstrap-theme.min.css">

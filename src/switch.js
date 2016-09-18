@@ -1,10 +1,9 @@
 
-
 function getButtonUrl(button,service) {
   var action = button.attr('data-action'); 
   var group = button.attr('data-group'); 
   var schalt = button.attr('data-switch'); 
-  return 'http://192.168.178.20/switch/'+service+'.php?group='+group+'&switch='+schalt+'&action='+action;
+  return 'http://192.168.178.20/switch/service/'+service+'.php?group='+group+'&switch='+schalt+'&action='+action;
 }
 
 function updateTime() {
