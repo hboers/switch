@@ -16,8 +16,17 @@
   <author email="hboers@me.com">
       Heinrich Boers
   </author>
+
+
   <icon src="icon.png" />
+
+
   <access origin="*" />
+  <plugin name="cordova-plugin-whitelist" version="1" />
+  <allow-intent href="http://*/*" />
+  <allow-intent href="https://*/*" />
+
+
   <platform name="android" />
 <!--
   <platform name="ios" />
