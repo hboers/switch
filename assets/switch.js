@@ -1,3 +1,17 @@
+$(document).ready(function() {
+    // are we running in native app or in a browser?
+    window.isphone = false;
+    if(document.URL.indexOf("http://") === -1 
+        && document.URL.indexOf("https://") === -1) {
+        window.isphone = true;
+    }
+
+    if( window.isphone ) {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    } else {
+        onDeviceReady();
+    }
+});
 
 function getButtonUrl(button,service) {
   var action = button.attr('data-action'); 
@@ -35,7 +49,7 @@ function update() {
   setTimeout(updateTime,300);
 }
 
-$(function(){
+function onDeviceReady() {
   $('.switch button').on('click',function(event){
     var button = $(event.target);
     var url = getButtonUrl(button,'switch'); 
@@ -52,6 +66,6 @@ $(function(){
     function(){
       updateTime();
   }, 15000);
-});
+};
 
 
