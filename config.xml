@@ -17,6 +17,7 @@
       Heinrich Boers
   </author>
   <icon src="icon.png" />
+  <access origin="*" />
   <platform name="android" />
 <!--
   <platform name="ios" />
