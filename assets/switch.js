@@ -55,11 +55,13 @@ function update() {
 }
 
 function onDeviceReady() {
-  alert('hello switch');
+  //alert('hello switch');
   $('.switch button').on('click',function(event){
     var button = $(event.target);
     var url = getButtonUrl(button,'switch'); 
+    alert(url);
     $.get(url, function(data){
+      alert('get called');
       update();			
     });
   });
