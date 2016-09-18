@@ -11,16 +11,16 @@ if (!isset($switch[$aSwitch])) die("Invalid switch");
 $nSwitch = $switch[$aSwitch];
 $nAction=$_GET['action'];
 $output =$nSys.$nGroup.$nSwitch.$nAction.$nDelay;
-$state = 'state/'.$nSys.$nGroup.$aSwitch;
+$state = '../state/'.$nSys.$nGroup.$aSwitch;
 if (file_exists($state)) {
   if ($nAction == 0) {
     unlink($state);
-    file_put_contents('log/switch.log',sprintf("%s,%s,%d,%s,%s,%s\n",$remote_addr,$forwarded_for,time(),$nGroup,$aSwitch,'off'),FILE_APPEND);
+    file_put_contents('../log/switch.log',sprintf("%s,%s,%d,%s,%s,%s\n",$remote_addr,$forwarded_for,time(),$nGroup,$aSwitch,'off'),FILE_APPEND);
   } 
 } else {
   if ($nAction == 1) {
     touch($state);
-    file_put_contents('log/switch.log',sprintf("%s,%s,%d,%s,%s,%s\n",$remote_addr,$forwarded_for,time(),$nGroup,$aSwitch,'on'),FILE_APPEND);
+    file_put_contents('../log/switch.log',sprintf("%s,%s,%d,%s,%s,%s\n",$remote_addr,$forwarded_for,time(),$nGroup,$aSwitch,'on'),FILE_APPEND);
   }
 }
 

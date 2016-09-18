@@ -1,1 +1,5 @@
+#!/bin/sh
+cd src
 inliner index.php >index.html
+cd ..
+mv src/index.html .
