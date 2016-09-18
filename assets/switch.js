@@ -1,20 +1,21 @@
 
 
 $(document).ready(function() {
-    alert('hi');
+   
     // are we running in native app or in a browser?
     window.isphone = false;
     if(document.URL.indexOf("http://") === -1 
         && document.URL.indexOf("https://") === -1) {
         window.isphone = true;
     }
-    alert(window.isphone);
-
+    onDeviceReady();
+/*
     if( window.isphone ) {
         document.addEventListener("deviceready", onDeviceReady, false);
     } else {
         onDeviceReady();
     }
+*/
 });
 
 function getButtonUrl(button,service) {
