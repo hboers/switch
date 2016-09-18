@@ -16,10 +16,7 @@
   <author email="hboers@me.com">
       Heinrich Boers
   </author>
-
-  <access origin="192.168.178.*" />
-  <allow-navigation href="http://*/*" />
-  <allow-intent href="http://*/*" />
+  <icon src="icon.png" />
   <platform name="android" />
 <!--
   <platform name="ios" />
