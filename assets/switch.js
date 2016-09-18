@@ -1,3 +1,5 @@
+alert('hi');
+
 $(document).ready(function() {
     // are we running in native app or in a browser?
     window.isphone = false;
